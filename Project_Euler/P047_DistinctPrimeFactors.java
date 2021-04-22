@@ -5,10 +5,11 @@ class DistinctPrimeFactors {
 	public static void main(String[] args) {
 		int[] numOfFactors = new int[4];
 		long[] fourNumbers = {10, 11, 12, 13};
+		for (int j = 0; j < 4; j++) {
+			numOfFactors[j] = numOfPrimeFactors(fourNumbers[j]);
+		}
 		while (true) {
-			for (int j = 0; j < 4; j++) {
-				numOfFactors[j] = numOfPrimeFactors(fourNumbers[j]);
-			}
+			numOfFactors[3]= numOfPrimeFactors(fourNumbers[3]);
 			boolean isAll4 = true;
 			for (int k : numOfFactors) {
 				if (k != 4)
@@ -23,6 +24,10 @@ class DistinctPrimeFactors {
 			fourNumbers[1] = fourNumbers[2];
 			fourNumbers[2] = fourNumbers[3];
 			fourNumbers[3] = fourNumbers[2] + 1;
+			numOfFactors[0] = numOfFactors[1];
+			numOfFactors[1] = numOfFactors[2];
+			numOfFactors[2] = numOfFactors[3];
+			numOfFactors[3] = 0;
 		}
 	}
 	
