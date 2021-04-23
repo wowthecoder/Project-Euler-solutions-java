@@ -23,7 +23,6 @@ class ReciprocalCycles {
 				if (remainders.containsKey(rem)) {
 					firstOccurence = remainders.get(rem);
 					secondOccurence = pos;
-					System.out.println(d + " : " + (secondOccurence-firstOccurence));
 					break;	
 				}					
 				remainders.put(rem, pos);
