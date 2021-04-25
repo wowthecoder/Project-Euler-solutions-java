@@ -19,7 +19,7 @@ public class Solution {
                     n /= i;
                 }
             }
-            if (n > 2 && n > largestPrimeFactor)
+            if (n >= 2 && n > largestPrimeFactor)
                 largestPrimeFactor = n;
             System.out.println(largestPrimeFactor);
         }
