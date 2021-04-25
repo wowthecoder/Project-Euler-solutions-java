@@ -29,7 +29,7 @@ public class EulerTotientMax {
 				num /= i;
 			}
 		}
-		if (num > 2)
+		if (num >= 2)
 			primeFactors.add(num);
 		//Now we can do the calculation
 		//Use numerator and denominator to avoid floating point calculations
